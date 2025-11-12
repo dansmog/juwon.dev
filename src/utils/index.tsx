@@ -55,12 +55,7 @@ export const favouriteProjects: Project[] = [
       "React Router",
       "Tailwindcss",
     ],
-    images: [
-      "https://res.cloudinary.com/bridalmarket/image/upload/v1762964482/Frontend%20Applicaiton%20development/Portfolio%20website/Text_-_Openai_API_egj5jj.png",
-      "https://res.cloudinary.com/bridalmarket/image/upload/v1762964482/Frontend%20Applicaiton%20development/Portfolio%20website/Text_-_Openai_API-2_klastk.png",
-      "https://res.cloudinary.com/bridalmarket/image/upload/v1762964482/Frontend%20Applicaiton%20development/Portfolio%20website/Text_-_Openai_API-3_yddgmg.png",
-      "https://res.cloudinary.com/bridalmarket/image/upload/v1762964486/Frontend%20Applicaiton%20development/Portfolio%20website/Text_-_Openai_API-4_pxrdfo.png",
-    ],
+    images: [],
     url: "https://bujeti.com/",
   },
   {

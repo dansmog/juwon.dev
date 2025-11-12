@@ -30,7 +30,7 @@ const Popover = () => {
           onMouseEnter={() => setHoveredId(experience.id)}
           onMouseLeave={() => setHoveredId(null)}
         >
-          <AnimatePresence>
+          {/* <AnimatePresence>
             {hoveredId === experience.id && (
               <motion.div
                 layout
@@ -48,7 +48,7 @@ const Popover = () => {
                     : "left-1/2 -translate-x-1/2"
                 } bg-white border border-[#F3F3F3] rounded-xl p-4 w-72 z-30`}
               >
-                {/* Profile Info */}
+            
                 <div className="flex items-center mb-3">
                   <div className="flex flex-col">
                     <span className="font-semibold text-gray-900 text-xs"></span>
@@ -81,8 +81,8 @@ const Popover = () => {
                 </div>
               </motion.div>
             )}
-          </AnimatePresence>
-          {/* Text that triggers popover */}
+          </AnimatePresence> */}
+        
           <motion.div
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
