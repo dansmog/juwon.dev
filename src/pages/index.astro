@@ -4,6 +4,7 @@ import Hero from "../components/Hero.astro";
 import Layout from "../layouts/Layout.astro";
 import ThemeWrapper from "../layouts/ThemeWrapper.astro";
 import "../styles/global.css";
+import { favouriteProjects } from "@/utils";
 ---
 
 <Layout>
@@ -819,9 +820,9 @@ import "../styles/global.css";
       >
     </section>
 
-    <section class="py-10">
+    <section class="pb-10">
       <ThemeWrapper>
-        <ProjectList client:load />
+        <ProjectList client:load projects={favouriteProjects}/>
       </ThemeWrapper>
     </section>
   </section>

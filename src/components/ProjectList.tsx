@@ -9,64 +9,9 @@ import {
   ModalTrigger,
 } from "@/components/ui/animated-modal";
 
-interface Project {
-  id: number;
-  title: string;
-  category: string;
-  image: string;
-  industry: string;
-  role: string;
-}
 
-const projects: Project[] = [
-  {
-    id: 1,
-    title: "Flinto for Mac",
-    category: "Project Portfolio",
-    image:
-      "https://images.unsplash.com/photo-1517322048670-4fba75cbbb62?q=80&w=3000&auto=format&fit=crop",
-    industry: "Design Tools",
-    role: "Design Engineer",
-  },
-  {
-    id: 2,
-    title: "Flinto Lite",
-    category: "Project Portfolio",
-    image:
-      "https://images.unsplash.com/photo-1573790387438-4da905039392?q=80&w=3425&auto=format&fit=crop",
-    industry: "Mobile Apps",
-    role: "Frontend Developer",
-  },
-  {
-    id: 3,
-    title: "ReadyRunner",
-    category: "Project Portfolio",
-    image:
-      "https://images.unsplash.com/photo-1555400038-63f5ba517a47?q=80&w=3540&auto=format&fit=crop",
-    industry: "SaaS",
-    role: "Product Designer",
-  },
-  {
-    id: 4,
-    title: "TaskTXT",
-    category: "Project Portfolio",
-    image:
-      "https://images.unsplash.com/photo-1554931670-4ebfabf6e7a9?q=80&w=3387&auto=format&fit=crop",
-    industry: "Productivity",
-    role: "Design Engineer",
-  },
-  {
-    id: 5,
-    title: "Chonky Menu Re-Creation",
-    category: "Posts",
-    image:
-      "https://images.unsplash.com/photo-1546484475-7f7bd55792da?q=80&w=2581&auto=format&fit=crop",
-    industry: "UI/UX",
-    role: "Frontend Developer",
-  },
-];
 
-const ProjectList = () => {
+const ProjectList = ({projects}: {projects: Project}) => {
   const [hoveredId, setHoveredId] = useState<number | null>(null);
 
   return (
@@ -85,8 +30,8 @@ const ProjectList = () => {
                     <div className="relative">
                       {/* Text - stays visible */}
                       <div>
-                        <h3 className="text-xl md:text-2xl font-medium tracking-tight text-gray-900">
-                          {project.title}
+                        <h3 className="text-base font-medium tracking-tight text-gray-900">
+                          {project.title} - <span className="text-sm">{project?.tagline}</span>
                         </h3>
                         <p className="text-sm text-gray-500 mt-1">
                           {project.industry} · {project.role}
