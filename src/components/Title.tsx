@@ -61,7 +61,7 @@ export default function App() {
             with care, building {" "} 
             <span className="font-playfair italic text-[#6B7280]">interactive</span> and  {" "}
             <span className="font-playfair italic text-[#6B7280]">delightful</span> products at the
-          intersection of design and engineering. From Figma to production-ready Code
+          intersection of design and engineering. 
         </span>
       </Trail>
     </div>

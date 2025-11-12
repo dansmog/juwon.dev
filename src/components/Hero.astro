@@ -1,23 +1,26 @@
 ---
 import ThemeWrapper from "../layouts/ThemeWrapper.astro";
 import Popover from "./Popover";
+import Socials from "./Socials.astro";
 import Title from "./Title";
 import { Image } from "astro:assets";
 ---
 
 <ThemeWrapper>
   <section class="pt-10 md:pt-20 z-20">
-    <img
-      src="https://res.cloudinary.com/bridalmarket/image/upload/c_scale,w_281/v1762945476/Frontend%20Applicaiton%20development/Portfolio%20website/FullSizeRender_2_xfi72c.png"
-      alt="Description"
-   
-      class="rounded-full w-16 h-16 object-cover"
-    />
+    <div class="flex items-center justify-between">
+      <img
+        src="https://res.cloudinary.com/bridalmarket/image/upload/c_scale,w_281/v1762945476/Frontend%20Applicaiton%20development/Portfolio%20website/FullSizeRender_2_xfi72c.png"
+        alt="Description"
+        class="rounded-full w-16 h-16 object-cover"
+      />
+      <Socials />
+    </div>
     <h1 class="font-inter font-medium text-sm tracking-tighter mb-4 mt-4">
       Hi 👋, I'm Juwon Daniel
     </h1>
     <Title client:load />
-    <p class="text-base mt-2  text-[#6b7280]">
+    <p class="text-base mt-2 text-[#6b7280]">
       I’m the product engineer who can bridge the gap between design and
       engineering to give your product that extra attention to detail to stand
       out from competitors, with beautiful components, dashboards, interactions

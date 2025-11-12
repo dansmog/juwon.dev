@@ -1,6 +1,12 @@
-import images from "../../utils"
+"use client";
+
+import { motion } from "motion/react";
+import { useState } from "react";
+
+import { images } from "../../utils";
 
 const QuickComponentView = () => {
+
   return (
     <div className="flex justify-center items-center">
       {images.map((image, idx) => (
@@ -19,14 +25,14 @@ const QuickComponentView = () => {
             rotate: 0,
             zIndex: 100,
           }}
-          className="rounded-xl -mr-4 mt-4 p-1 bg-white dark:bg-neutral-800 dark:border-neutral-700 border border-neutral-100 shrink-0 overflow-hidden"
+          className="rounded-xl -mr-4 mt-4 p-1 bg-neutral-800 border-neutral-700 border shrink-0 overflow-hidden"
         >
           <img
             src={image}
             alt="bali images"
             width="500"
             height="500"
-            className="rounded-lg h-20 w-20 md:h-40 md:w-40 object-cover shrink-0"
+            className="rounded-lg h-40 w-50 md:h-70 md:w-90 object-cover shrink-0"
           />
         </motion.div>
       ))}

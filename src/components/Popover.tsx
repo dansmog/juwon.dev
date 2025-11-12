@@ -86,7 +86,7 @@ const Popover = () => {
           <motion.div
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
-            className="relative cursor-pointer text-sm md:text-base text-[#6B7280]"
+            className="relative cursor-pointer  text-[#6B7280]"
             animate={{
               scale: hoveredId === experience.id ? 1.1 : 1,
               zIndex: hoveredId === experience.id ? 20 : 10,

@@ -15,7 +15,7 @@ const ProjectList = ({projects}: {projects: Project}) => {
   const [hoveredId, setHoveredId] = useState<number | null>(null);
 
   return (
-    <div className="w-full max-w-4xl mx-auto py-12">
+    <div className="w-full max-w-4xl mx-auto ">
       <div className="space-y-4">
         {projects.map((project) => (
           <Modal key={project.id}>
@@ -25,7 +25,7 @@ const ProjectList = ({projects}: {projects: Project}) => {
               onMouseLeave={() => setHoveredId(null)}
             >
               <ModalTrigger className="w-full p-0 text-left bg-transparent border-none cursor-pointer">
-                <div className="flex items-center justify-between py-4 border-dotted-b border-gray-200">
+                <div className="flex items-center justify-between py-4 border-b border-dashed border-gray-200">
                   <div className="flex-1">
                     <div className="relative">
                       {/* Text - stays visible */}
@@ -62,7 +62,7 @@ const ProjectList = ({projects}: {projects: Project}) => {
 
                   {/* Tap to reveal text */}
                   <motion.span
-                    className="text-xs md:text-sm text-gray-500 ml-4 whitespace-nowrap"
+                    className="text-xs tracking-normal md:text-sm text-gray-500 ml-4 whitespace-nowrap"
                     animate={{
                       x: hoveredId === project.id ? [0, -2, 2, -2, 2, 0] : 0,
                     }}
@@ -71,7 +71,7 @@ const ProjectList = ({projects}: {projects: Project}) => {
                       ease: "easeInOut",
                     }}
                   >
-                    Tap/click to reveal
+                    Click to reveal
                   </motion.span>
                 </div>
               </ModalTrigger>
