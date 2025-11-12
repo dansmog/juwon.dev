@@ -9,9 +9,7 @@ import {
   ModalTrigger,
 } from "@/components/ui/animated-modal";
 
-
-
-const ProjectList = ({projects}: {projects: Project}) => {
+const ProjectList = ({ projects }: { projects: Project }) => {
   const [hoveredId, setHoveredId] = useState<number | null>(null);
 
   return (
@@ -31,7 +29,8 @@ const ProjectList = ({projects}: {projects: Project}) => {
                       {/* Text - stays visible */}
                       <div>
                         <h3 className="text-base font-medium tracking-tight text-gray-900">
-                          {project.title} - <span className="text-sm">{project?.tagline}</span>
+                          {project.title} -{" "}
+                          <span className="text-sm">{project?.tagline}</span>
                         </h3>
                         <p className="text-sm text-gray-500 mt-1">
                           {project.industry} · {project.role}
@@ -52,7 +51,6 @@ const ProjectList = ({projects}: {projects: Project}) => {
                               src={project.image}
                               alt={project.title}
                               className="w-[200px] h-auto object-cover rounded-lg border-4 border-[#f3f3f3]"
-                              
                             />
                           </motion.div>
                         )}
@@ -80,20 +78,46 @@ const ProjectList = ({projects}: {projects: Project}) => {
             {/* Modal Content */}
             <ModalBody>
               <ModalContent>
-                <h4 className="text-2xl cursor-pointer md:text-4xl font-bold text-gray-900 mb-4">
-                  {project.title}
-                </h4>
-                <p className="text-sm text-gray-500 mb-6">{project.category}</p>
+                <div className="mb-5">
+                  <h3 className="text-base font-medium tracking-tight text-gray-900">
+                    {project.title} -{" "}
+                    <span className="text-sm">{project?.tagline}</span>
+                  </h3>
+                  <p className="text-sm text-gray-500 mt-1">
+                    {project.industry} · {project.role}
+                  </p>
+
+                  <div className="flex flex-col gap-4 md:gap-0 md:flex-row justify-between md:items-center mt-4">
+                    <div className="flex flex-wrap gap-2 items-center ">
+                      {project?.stacks?.map((stack, idx) => {
+                        return (
+                          <p className="text-sm text-gray-500" id={idx}>
+                            {stack}
+                          </p>
+                        );
+                      })}
+                    </div>
+                    <a href={project.url} target="_blank" className="text-black text-sm cursor-pointer">View Page</a>
+                  </div>
+                </div>
                 <div className="w-full">
                   <img
                     src={project.image}
                     alt={project.title}
                     className="w-full h-auto rounded-lg object-cover"
                   />
+                  <div className="mt-5 flex flex-col gap-5">
+                    {project.images?.map((image, idx) => {
+                      return (
+                        <img
+                          src={image}
+                          id={idx}
+                          className="w-full h-auto rounded-lg object-cover"
+                        />
+                      );
+                    })}
+                  </div>
                 </div>
-                <p className="text-gray-700 mt-6">
-                  Project description and details will go here...
-                </p>
               </ModalContent>
             </ModalBody>
           </Modal>

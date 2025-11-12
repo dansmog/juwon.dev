@@ -417,7 +417,12 @@ import QuickComponentView from "@/components/ui/QuickComponentView";
     </section>
     <section class="py-10">
       <ThemeWrapper>
-        <QuickComponentView client:load/>
+        <div class="w-full p-2 rounded-2xl border-4 border-[#f3f3f3]">
+          <img
+            src="https://res.cloudinary.com/bridalmarket/image/upload/v1746528928/squarelabs_founders_dashboard_uivnm0.webp"
+            alt="Buyemejollof dashboard design"
+          />
+        </div>
       </ThemeWrapper>
     </section>
     <section class="py-10 fixed bottom-0 left-[-300px]">
@@ -825,7 +830,7 @@ import QuickComponentView from "@/components/ui/QuickComponentView";
       >
     </section>
 
-    <section class="pt-15 pb-10">
+    <section class="pt-8 pb-10">
       <ThemeWrapper>
         <div class="flex justify between items-center">
           <h4 class="text-base text-[#6b7280]">Favourite Products</h4>
@@ -833,13 +838,33 @@ import QuickComponentView from "@/components/ui/QuickComponentView";
         <ProjectList client:load projects={favouriteProjects} />
       </ThemeWrapper>
     </section>
-
-    <section class="pt-15 pb-10">
+    <section class="py-10">
       <ThemeWrapper>
-        <div class="flex justify between items-center">
-          <h4 class="text-base text-[#6b7280]">Weekend Product exploration</h4>
+        <div class="w-full flex flex-col gap-4">
+          <div class="w-full p-2 rounded-2xl border-2 border-[#f3f3f3]">
+            <img
+              src="https://res.cloudinary.com/bridalmarket/image/upload/v1746809706/Services_-_create_a_request_tuemfn.webp"
+              alt="Buyemejollof dashboard design "
+              class="rounded-lg"
+            />
+          </div>
+
+          <div class="w-full p-2 rounded-2xl border-2 border-[#f3f3f3]">
+            <img
+              src="https://res.cloudinary.com/bridalmarket/image/upload/v1762961466/Frontend%20Applicaiton%20development/Portfolio%20website/Management_screen_ezzvzb.png"
+              alt="Buyemejollof dashboard design"
+              class="rounded-lg"
+            />
+          </div>
+
+          <div class="w-full p-2 rounded-2xl border-2 border-[#f3f3f3]">
+            <img
+              src="https://res.cloudinary.com/bridalmarket/image/upload/v1762961465/Frontend%20Applicaiton%20development/Portfolio%20website/Payout_setup_xgza8d.png"
+              alt="Buyemejollof dashboard design"
+              class="rounded-lg"
+            />
+          </div>
         </div>
-        <ProjectList client:load projects={weekendProjects} />
       </ThemeWrapper>
     </section>
   </section>

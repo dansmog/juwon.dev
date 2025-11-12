@@ -146,7 +146,7 @@ export const ModalContent = ({
   className?: string;
 }) => {
   return (
-    <div className={cn("flex flex-col flex-1 p-8 md:p-10", className)}>
+    <div className={cn("flex flex-col flex-1 p-8 md:p-10 overflow-y-auto  max-h-[80vh]", className)}>
       {children}
     </div>
   );
@@ -185,7 +185,7 @@ const Overlay = ({ className }: { className?: string }) => {
         opacity: 0,
         backdropFilter: "blur(0px)",
       }}
-      className={`fixed inset-0 h-full w-full  bg-opacity-10 z-50 ${className}`}
+      className={`fixed inset-0 h-full w-full z-50 ${className}`}
     ></motion.div>
   );
 };
@@ -195,7 +195,7 @@ const CloseIcon = () => {
   return (
     <button
       onClick={() => setOpen(false)}
-      className="absolute top-4 right-4 group"
+      className="absolute top-4 right-4 group p-2 bg-white rounded-full"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -203,7 +203,7 @@ const CloseIcon = () => {
         height="24"
         viewBox="0 0 24 24"
         fill="none"
-        stroke="currentColor"
+        stroke="#000"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
