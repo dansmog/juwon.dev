@@ -55,7 +55,9 @@ export const favouriteProjects: Project[] = [
       "React Router",
       "Tailwindcss",
     ],
-    images: [],
+    images: [
+      "https://res.cloudinary.com/bridalmarket/image/upload/v1762967847/Frontend%20Applicaiton%20development/Portfolio%20website/Screenshot_2025-11-12_at_6.17.15_PM_afkggm.png",
+    ],
     url: "https://bujeti.com/",
   },
   {
