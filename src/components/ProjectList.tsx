@@ -97,7 +97,13 @@ const ProjectList = ({ projects }: { projects: Project }) => {
                         );
                       })}
                     </div>
-                    <a href={project.url} target="_blank" className="text-black text-sm cursor-pointer">View Page</a>
+                    <a
+                      href={project.url}
+                      target="_blank"
+                      className="text-black text-sm cursor-pointer hover:scale-[1.5px] hover:underline"
+                    >
+                      View Page
+                    </a>
                   </div>
                 </div>
                 <div className="w-full">
