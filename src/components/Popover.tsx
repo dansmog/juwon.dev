@@ -6,7 +6,7 @@ import { useState } from "react";
 const experiences = [
   {
     id: 1,
-    companyName: "Squarelabs studio",
+    companyName: "Squarelabs Studios",
     role: "Pushing pixels",
     url: "https://www.squarelabs.agency",
   },
@@ -21,11 +21,11 @@ const Popover = () => {
   const [hoveredId, setHoveredId] = useState<number | null>(null);
 
   return (
-    <div className="mt-4 md:mt-0 flex items-center relative gap-4">
+    <div className="mt-2 md:mt-0 flex md:items-center relative gap-2 md:gap-4 flex-col md:flex-row ">
       {experiences.map((experience, index) => (
         <div
           key={experience.id}
-          className="relative flex flex-col  items-center cursor-pointer group"
+          className="relative   items-center cursor-pointer group"
        
           onMouseEnter={() => setHoveredId(experience.id)}
           onMouseLeave={() => setHoveredId(null)}
@@ -86,7 +86,7 @@ const Popover = () => {
           <motion.div
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
-            className="relative cursor-pointer text-[#6B7280]"
+            className="relative cursor-pointer text-sm md:text-base text-[#6B7280]"
             animate={{
               scale: hoveredId === experience.id ? 1.1 : 1,
               zIndex: hoveredId === experience.id ? 20 : 10,
