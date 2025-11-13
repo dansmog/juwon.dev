@@ -57,6 +57,12 @@ export const favouriteProjects: Project[] = [
     ],
     images: [
       "https://res.cloudinary.com/bridalmarket/image/upload/v1762967847/Frontend%20Applicaiton%20development/Portfolio%20website/Screenshot_2025-11-12_at_6.17.15_PM_afkggm.png",
+      "https://res.cloudinary.com/bridalmarket/image/upload/v1763017628/Screenshot_2025-11-13_at_8.04.21_AM_fzflih.png",
+      "https://res.cloudinary.com/bridalmarket/image/upload/v1763017629/Screenshot_2025-11-13_at_8.05.32_AM_gpzsdo.png",
+      "https://res.cloudinary.com/bridalmarket/image/upload/v1763017628/Screenshot_2025-11-13_at_8.05.05_AM_ggtgv7.png",
+      "https://res.cloudinary.com/bridalmarket/image/upload/v1763017730/Screenshot_2025-11-13_at_8.08.26_AM_ftgg5q.png",
+      "https://res.cloudinary.com/bridalmarket/image/upload/v1763017631/Screenshot_2025-11-13_at_8.04.35_AM_kfynle.png",
+      "https://res.cloudinary.com/bridalmarket/image/upload/v1763017731/Screenshot_2025-11-13_at_8.08.05_AM_ruceca.png",
     ],
     url: "https://bujeti.com/",
   },
