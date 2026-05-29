@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { motion } from "motion/react";
+import { motion, type Variants } from "motion/react";
 
-const Trail: React.FC<{ open: boolean }> = ({ open, children }) => {
+const Trail: React.FC<React.PropsWithChildren<{ open: boolean }>> = ({ open, children }) => {
   const items = React.Children.toArray(children);
 
-  const container = {
+  const container: Variants = {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
@@ -14,7 +14,7 @@ const Trail: React.FC<{ open: boolean }> = ({ open, children }) => {
     },
   };
 
-  const item = {
+  const item: Variants = {
     hidden: {
       opacity: 0,
       x: 20,

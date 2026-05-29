@@ -1,0 +1,38 @@
+---
+import ThemeWrapper from "../layouts/ThemeWrapper.astro";
+---
+
+<ThemeWrapper>
+  <section class="py-16 flex flex-col items-center text-center gap-6">
+    <div class="flex flex-col gap-2">
+      <h2 class="font-medium text-2xl md:text-3xl tracking-tighter">
+        Let's make your product stand out.
+      </h2>
+      <p class="text-base text-[#6b7280] max-w-md mx-auto">
+        Have a product that deserves that extra attention to detail? I'd love to
+        hear about it.
+      </p>
+    </div>
+    <a
+      href="mailto:juwonanthony@gmail.com?subject=Let's%20work%20together"
+      class="group inline-flex items-center gap-2 rounded-full bg-black px-8 py-4 text-base font-medium text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl dark:bg-white dark:text-black"
+    >
+      Connect with me
+      <svg
+        width="18"
+        height="18"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        class="transition-transform duration-300 group-hover:translate-x-1"
+      >
+        <path
+          d="M5 12h14M13 6l6 6-6 6"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+      </svg>
+    </a>
+  </section>
+</ThemeWrapper>
